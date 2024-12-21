@@ -24,15 +24,41 @@ import TeamCard from "@components/TeamCard.astro";
 ---
 
 <Layout>
-	<div class="flex flex-col items-center justify-center gap-2">
-		<h1 class="max-sm:text-3xl sm:text-4xl md:text-7xl text-white font-bold tracking-wide">Volei Vallirana</h1>
-		<h3 class="text-lg text-slate-200 text-center mb-12 mx-6">
-			Club por y para el vóley en Vallirana 🏐
-		</h3>
-		<div
-			class="flex flex-row flex-wrap justify-evenly gap-10 max-w-[80%]"
-		>
-			{teams.map((team, idx) => <TeamCard {...team} />)}
+	<div class="flex flex-row items-end gap-2">
+		<img
+			src="/aevoley-nobg.png"
+			alt="AE Volei Vallirana"
+			class="w-48 h-48"
+		/>
+		<div class="flex flex-col items-start gap-2 pb-6">
+			<h1
+				class="max-sm:text-3xl sm:text-4xl md:text-7xl text-white font-bold tracking-wide mx-6"
+			>
+				Volei Vallirana
+			</h1>
+			<h3 class="text-lg text-slate-200 text-center mx-6">
+				Club por y para el vóley en Vallirana 🏐
+			</h3>
 		</div>
+	</div>
+	<div
+		class="flex flex-row flex-wrap justify-evenly gap-10 max-w-[80%] mt-10"
+	>
+		{teams.map((team, idx) => <TeamCard {...team} />)}
+	</div>
+	<div
+		class="flex flex-row flex-wrap justify-evenly gap-10 max-w-[80%] mt-10"
+	>
+		{teams.map((team, idx) => <TeamCard {...team} />)}
+	</div>
+	<div
+		class="flex flex-row flex-wrap justify-evenly gap-10 max-w-[80%] mt-10"
+	>
+		{teams.map((team, idx) => <TeamCard {...team} />)}
+	</div>
+	<div
+		class="flex flex-row flex-wrap justify-evenly gap-10 max-w-[80%] mt-10"
+	>
+		{teams.map((team, idx) => <TeamCard {...team} />)}
 	</div>
 </Layout>

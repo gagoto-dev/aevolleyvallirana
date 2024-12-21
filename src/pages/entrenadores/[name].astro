@@ -1,0 +1,29 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+export function getStaticPaths() {
+    return [
+        { params: { name: "oscar" } },
+        { params: { name: "mel" } },
+    ];
+}
+
+const { name } = Astro.params;
+---
+
+<Layout>
+    <div class="max-w-[80vw] flex flex-col">
+        <div class="w-full flex justify-center">
+            <img
+                class="aspect-auto w-auto rounded-2xl"
+                src={`/${name}.png`}
+                alt={name}
+            />
+        </div>
+        <h1
+            class="text-3xl -mt-9 ml-auto backdrop-blur-lg px-5 py-0 rounded-e-2xl"
+        >
+            {name}
+        </h1>
+    </div>
+</Layout>
