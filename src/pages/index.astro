@@ -1,26 +1,7 @@
 ---
+import TeamsSection from "@components/TeamsSection.astro";
 import Layout from "@layouts/Layout.astro";
-const teams = [
-	{
-		key: "master-a",
-		name: "Masters Mixt",
-		image: "/master-a.png",
-		description: "Equip mixt de Vallirana",
-	},
-	{
-		key: "dominiques",
-		name: "Dominiques",
-		image: "/master-a.png",
-		description: "Equipo de volei Dominiques Vallirana",
-	},
-	{
-		key: "vall-d-arus",
-		name: "Vall d'Arús",
-		image: "/master-a.png",
-		description: "Equipo de volei Vall d'Arús Vallirana",
-	},
-];
-import TeamCard from "@components/TeamCard.astro";
+
 ---
 
 <Layout>
@@ -28,7 +9,7 @@ import TeamCard from "@components/TeamCard.astro";
 		<img
 			src="/aevoley-nobg.png"
 			alt="AE Volei Vallirana"
-			class="w-48 h-48"
+			class="max-md:w-36 md:w-48"
 		/>
 		<div class="flex flex-col items-start gap-2 pb-6">
 			<h1
@@ -41,24 +22,5 @@ import TeamCard from "@components/TeamCard.astro";
 			</h3>
 		</div>
 	</div>
-	<div
-		class="flex flex-row flex-wrap justify-evenly gap-10 max-w-[80%] mt-10"
-	>
-		{teams.map((team, idx) => <TeamCard {...team} />)}
-	</div>
-	<div
-		class="flex flex-row flex-wrap justify-evenly gap-10 max-w-[80%] mt-10"
-	>
-		{teams.map((team, idx) => <TeamCard {...team} />)}
-	</div>
-	<div
-		class="flex flex-row flex-wrap justify-evenly gap-10 max-w-[80%] mt-10"
-	>
-		{teams.map((team, idx) => <TeamCard {...team} />)}
-	</div>
-	<div
-		class="flex flex-row flex-wrap justify-evenly gap-10 max-w-[80%] mt-10"
-	>
-		{teams.map((team, idx) => <TeamCard {...team} />)}
-	</div>
+	<TeamsSection/>
 </Layout>

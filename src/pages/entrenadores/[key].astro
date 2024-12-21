@@ -1,0 +1,28 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { coaches, findCoach } from "@lib/consts";
+
+export function getStaticPaths() {
+    return coaches.map((coach) => ({ params: { key: coach.key } }));
+}
+
+const { key } = Astro.params;
+const coach = findCoach(key);
+---
+
+<Layout>
+    <div class="max-w-[80vw] flex flex-col">
+        <div class="w-full flex justify-center">
+            <img
+                class="aspect-auto w-auto rounded-2xl"
+                src={`/${key}.png`}
+                alt={key}
+            />
+        </div>
+        <h1
+            class="text-3xl -mt-9 ml-auto backdrop-blur-lg px-5 py-0 rounded-e-2xl"
+        >
+            {coach?.name}
+        </h1>
+    </div>
+</Layout>

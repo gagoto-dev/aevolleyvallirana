@@ -1,0 +1,8 @@
+---
+import { coaches } from "@lib/consts";
+import CoachCard from "./CoachCard.astro";
+---
+
+<div class="flex flex-row flex-wrap justify-evenly gap-10 max-w-[80%] mt-10">
+    {coaches.map((coach, idx) => <CoachCard {...coach}/>)}
+</div>

@@ -1,0 +1,8 @@
+---
+import TeamCard from "./TeamCard.astro";
+import { teams } from "@lib/consts";
+---
+
+<div class="flex flex-row flex-wrap items-center justify-evenly gap-10 max-w-[80%] mt-10">
+    {teams.map((team, idx) => <TeamCard {...team} />)}
+</div>
