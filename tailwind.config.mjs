@@ -5,9 +5,6 @@ export default {
     theme: {
         colors: {
             ...colors,
-            "principal": "#005900",
-            "principal_border": "#267f26",
-            "principal_hover": "#1c6b1c",
             "txt": "#0C0F14",
             "txt_read": "#0C0F14dd",
             "background": "#dfffe3",

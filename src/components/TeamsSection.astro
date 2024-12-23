@@ -3,6 +3,13 @@ import TeamCard from "./TeamCard.astro";
 import { teams } from "@lib/consts";
 ---
 
-<div class="flex flex-row flex-wrap items-center justify-evenly gap-10 max-w-[80%] mt-10">
+<div
+    class:list={[
+        "grid grid-rows-1 max-w-[80%] mt-10",
+        "max-md:auto-rows-auto max-md:grid-cols-1 max-md:gap-4 max-md:max-w-[90%]",
+        `lg:grid lg:grid-cols-3 lg:grid-flow-col lg:grid-rows-1 lg:gap-8`, 
+        "justify-between"
+    ]}
+>
     {teams.map((team, idx) => <TeamCard {...team} />)}
 </div>

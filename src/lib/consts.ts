@@ -25,24 +25,24 @@ export const findTeam = (key: string) => {
 
 export const teams = [
     {
-        name: "Màster mixte",
+        name: "Máster mixto",
         key: "master-a",
         image: "/master-a.png",
-        description: "Equip mixt de Vallirana",
-        entrenadors: [findCoach("mel"), findCoach("oscar")],
+        description: "Equipo mixto de Vallirana",
+        coaches: [findCoach("mel"), findCoach("oscar")],
     },
     {
         name: "Vall d'Arús",
         key: "vall-darus",
         image: "/master-a.png",
-        description: "Equipo de volei Dominiques Vallirana",
-        entrenadors: [findCoach("oscar")],
+        description: "Equipo del instituto Vall d'Arús Vallirana",
+        coaches: [findCoach("mel")],
     },
     {
         name: "Dominiques Vallirana",
         key: "dominiques",
         image: "/master-a.png",
-        description: "Equipo de volei Vall d'Arús Vallirana",
-        entrenadors: [findCoach("mel")],
+        description: "Equipo de la escuela Dominiques Vallirana",
+        coaches: [findCoach("oscar")],
     }
 ];
