@@ -14,7 +14,20 @@ import Footer from "../components/Footer.astro";
 			type="image/x-icon"
 		/>
 		<title>Vòlei Vallirana</title>
-		<style>
+		<style is:global>
+			@font-face {
+				font-family: "Basalte-Fond";
+				src: url("/src/assets/fonts/Basalte-Fond.woff2") format("woff2");
+				font-weight: normal;
+				font-style: normal;
+			}
+			
+			.dorsal {
+				font-family: "Basalte-Fond", "Trebuchet MS",
+					"Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+					sans-serif;
+			}
+
 			* {
 				box-sizing: border-box;
 				color-scheme: dark;

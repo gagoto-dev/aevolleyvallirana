@@ -1,4 +1,5 @@
 ---
+import PlayerCard from "@components/PlayerCard.astro";
 import Layout from "@layouts/Layout.astro";
 import { teams, findTeam } from "@lib/consts";
 
@@ -11,18 +12,26 @@ const team = findTeam(key);
 ---
 
 <Layout>
-    <div class="max-w-[80vw] flex flex-col">
-        <div class="w-full flex justify-center">
+    <main class="w-[100vw]">
+        <div
+            class="flex flex-col mt-0 mb-20 mx-auto items-center gap-10
+            xl:max-w-[75vw] max-xl:max-w-full max-xl:mx-4"
+        >
             <img
-                class="aspect-auto w-auto rounded-2xl"
+                class="aspect-auto xl:w-3/4 rounded-2xl"
                 src={`/${key}.png`}
                 alt={key}
             />
+            <h1 class="max-xl:text-4xl xl:text-7xl text-center">
+                {team?.name}
+            </h1>
         </div>
-        <h1
-            class="text-3xl -mt-9 ml-auto backdrop-blur-lg px-5 py-0 rounded-e-2xl"
-        >
-            {team?.name}
-        </h1>
-    </div>
+        <h2 class="max-xl:text-3xl xl:text-6xl text-left mb-8 ml-8">Jugadores</h2>
+        <div class="flex flex-col justify-center items-center gap-10 mx-5">
+            {
+                Array.isArray(team?.players) &&
+                    team.players.map((player) => <PlayerCard {...player} />)
+            }
+        </div>
+    </main>
 </Layout>

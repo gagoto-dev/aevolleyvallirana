@@ -30,6 +30,83 @@ export const teams = [
         image: "/master-a.png",
         description: "Equipo mixto de Vallirana",
         coaches: [findCoach("mel"), findCoach("oscar")],
+        players: [
+            {
+                name:"Santi",
+                dorsal:1,
+                position:"Central"
+            },
+            {
+                name: "Alex",
+                dorsal: 2,
+                position: "Punta"
+            },
+            {
+                name: "Joel",
+                dorsal: 3,
+                position: "Central"
+            },
+            {
+                name: "Miguel",
+                dorsal: 4,
+                position: "Central"
+            },
+            {
+                name: "Paz",
+                dorsal: 5,
+                position: "Punta"
+            },
+            {
+                name: "Lope",
+                dorsal: 6,
+                position: "Colocador"
+            },
+            {
+                name: "Paulo",
+                dorsal: 7,
+                position: "Central"
+            },
+            {
+                name: "Óscar",
+                dorsal: 8,
+                position: "Colocador"
+            },
+            {
+                name: "Sergio",
+                dorsal: 9,
+                position: "Colocador"
+            },
+            {
+                name: "Gaspar",
+                dorsal: 10,
+                position: "Central"
+            },
+            {
+                name: "Iker",
+                dorsal: 11,
+                position: "Colocador"
+            },
+            {
+                name: "Laia",
+                dorsal: 12,
+                position: "Punta"
+            },
+            {
+                name: "Mel",
+                dorsal: 13,
+                position: "Colocadora"
+            },
+            {
+                name: "Isa",
+                dorsal: 14,
+                position: "Punta"
+            },
+            {
+                name: "Yessenia",
+                dorsal: 15,
+                position: "Punta"
+            }
+        ]
     },
     {
         name: "Vall d'Arús",

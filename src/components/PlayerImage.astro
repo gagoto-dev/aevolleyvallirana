@@ -1,0 +1,18 @@
+---
+import { Picture } from "astro:assets";
+
+interface Props {
+    imagePath: string;
+    altText: string;
+}
+
+let { imagePath, altText } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "@assets/*.{jpeg,jpg,png,gif}",
+);
+
+if (!images[imagePath]) imagePath = "/src/assets/master-10.png";
+---
+
+<Picture src={images[imagePath]()} alt={altText} />
