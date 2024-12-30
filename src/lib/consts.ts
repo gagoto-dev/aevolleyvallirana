@@ -105,6 +105,11 @@ export const teams = [
                 name: "Yessenia",
                 dorsal: 15,
                 position: "Punta"
+            },
+            {
+                name: "Evelyn",
+                dorsal: 17,
+                position: "Punta"
             }
         ]
     },
