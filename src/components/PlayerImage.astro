@@ -9,10 +9,10 @@ interface Props {
 let { imagePath, altText } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-    "@assets/*.{jpeg,jpg,png,gif}",
+    "@assets/jugadores/*.{jpeg,jpg,png,gif}",
 );
 
-if (!images[imagePath]) imagePath = "/src/assets/master-10.png";
+if (!images[imagePath]) imagePath = "/src/assets/jugadores/silueta-persona.png";
 ---
 
 <Picture src={images[imagePath]()} alt={altText} />

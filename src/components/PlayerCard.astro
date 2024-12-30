@@ -5,18 +5,23 @@ const { name, dorsal, position } = Astro.props;
 ---
 
 <div
-    class="bg-zinc-800 bg-opacity-20 rounded-2xl text-xl p-6 min-w-72
-            w-full max-w-[1440px] flex flex-col items-center
-            sm:flex-row sm:h-[66.6667vh] sm:justify-evenly"
+    class="bg-zinc-800 bg-opacity-10 rounded-2xl text-xl p-6 min-w-72
+            w-full max-w-96 flex flex-col items-center
+            sm:h-[66.6667vh] min-h-fit sm:justify-evenly hover:scale-105 transition-transform duration-300"
 >
-    <div class="w-full sm:w-96 max-sm:z-10 flex justify-center">
+    <div
+        class="w-full sm:w-96 aspect-[440/566] max-sm:z-10 flex justify-center items-center"
+    >
         {/* <img src={`/master-${dorsal}.png`} alt={name} /> */}
         <!-- <img src={`/master-10.png`} alt={name} /> -->
-        <PlayerImage imagePath=`/src/assets/master-${dorsal}.png` altText={name} />
+        <PlayerImage
+            imagePath=`/src/assets/jugadores/master-${dorsal}.png`
+            altText={name}
+        />
     </div>
-    <div class="flex flex-col items-center sm:self-end gap-4">
+    <div class="flex flex-col items-center gap-4">
         <h1
-            class="dorsal max-sm:z-20 max-sm:-mt-10 max-sm:mb-10 mb-14 text-white pt-4 text-[10rem] sm:text-[16rem] leading-4"
+            class="dorsal max-sm:z-20 max-sm:-mt-10 max-sm:mb-10 mb-14 text-white pt-4 text-[10rem] sm:text-[12rem] leading-4"
         >
             {dorsal}
         </h1>
