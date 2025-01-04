@@ -5,15 +5,14 @@ const { name, dorsal, position } = Astro.props;
 ---
 
 <div
-    class="bg-zinc-800 bg-opacity-10 rounded-2xl text-xl p-6 min-w-72
+    class="player bg-zinc-800 bg-opacity-10 rounded-2xl text-xl p-8 min-w-72
             w-full max-w-96 flex flex-col items-center
-            sm:h-[66.6667vh] min-h-fit sm:justify-evenly hover:scale-105 transition-transform duration-300"
+            sm:h-[66.6667vh] min-h-fit sm:justify-evenly 
+            hover:scale-105 transition-transform duration-300"
 >
     <div
         class="w-full sm:w-96 aspect-[440/566] max-sm:z-10 flex justify-center items-center"
     >
-        {/* <img src={`/master-${dorsal}.png`} alt={name} /> */}
-        <!-- <img src={`/master-10.png`} alt={name} /> -->
         <PlayerImage
             imagePath=`/src/assets/jugadores/master-${dorsal}.png`
             altText={name}

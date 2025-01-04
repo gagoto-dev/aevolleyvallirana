@@ -1,0 +1,24 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import MainLayout from "@layouts/Main.astro";
+
+const { name } = Astro.props;
+---
+
+<MainLayout title={`${name} - Vòlei Vallirana`}>
+	<main
+		class:list={[
+			"min-h-[90vh]",
+			"flex flex-col items-center justify-between w-full gap-10",
+			"bg-main",
+		]}
+	>
+		<div class="w-full">
+			<Header />
+			<slot />
+		</div>
+		<slot name="players" />
+		<Footer />
+	</main>
+</MainLayout>
