@@ -14,26 +14,93 @@ const team = findTeam(key);
 <TeamLayout bgKey=`${key}` name={team?.name}>
     <div
         class:list={[
-            "flex flex-col mt-0 mx-auto items-center gap-10",
-            "xl:max-w-[75vw] max-xl:max-w-full max-xl:mx-4",
-            `h-full rounded-lg`,
+            "mx-auto",
+            "xl:max-w-[75vw] max-xl:max-w-full",
+            `h-fit rounded-lg w-full relative`,
         ]}
     >
-        <h1
-            class="max-xl:text-4xl xl:text-7xl text-center self-end mt-auto backdrop-blur-md
-            py-2 px-4 rounded-e-lg"
+        <div
+            class:list={[
+                `main-image relative aspect-[4/3] h-[70vh] w-[75vw] sm:max-h-[70vh] flex mx-auto my-auto`,
+                `bg-[url('/${key}.webp')] bg-center bg-cover bg-no-repeat bg-origin-border justify-center`,
+            ]}
         >
-            {team?.name}
-        </h1>
+            <h1
+                class="team-name max-xl:text-4xl xl:text-5xl text-center backdrop-blur-sm
+                py-2 px-4 rounded-e-lg self-end mb-5"
+            >
+                {team?.name}
+            </h1>
+        </div>
     </div>
-    <!-- <h2 class="max-xl:text-3xl xl:text-6xl text-left mb-8 ml-8">Jugadores</h2> -->
-    <div
-        class="flex flex-row flex-wrap justify-center items-center gap-10 mx-5"
-        slot="players"
-    >
-        {
-            Array.isArray(team?.players) &&
-                team.players.map((player) => <PlayerCard {...player} />)
-        }
+    <div class="w-full" slot="players">
+        <!-- <h2 class="max-xl:text-3xl xl:text-6xl text-center mb-10 mx-auto">
+            Jugadores
+        </h2> -->
+        <div
+            class="players flex flex-row flex-wrap justify-center items-center gap-8 mx-5 pb-20"
+        >
+            {
+                Array.isArray(team?.players) &&
+                    team.players.map((player) => <PlayerCard {...player} />)
+            }
+        </div>
     </div>
 </TeamLayout>
+
+<style is:global>
+    .team-name {
+        animation: fade-out linear;
+        animation-timeline: view();
+        animation-range: exit -300px;
+    }
+
+    .main-image {
+        animation: header-animation linear forwards;
+        animation-timeline: view();
+        animation-range: exit;
+        scale: 1;
+        background-size: 100%;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .players .player {
+            animation: none;
+        }
+
+        .players .player {
+            animation: fade-in linear forwards;
+            animation-timeline: view(-300px);
+            animation-range: entry;
+            transform-origin: left;
+            scale: 0.8;
+            opacity: 0;
+        }
+    }
+
+    @keyframes header-animation {
+        15% {
+            background-size: 100%;
+            opacity: 1;
+        }
+        90%,
+        100% {
+            opacity: 0;
+            background-size: 200%;
+        }
+    }
+
+    @keyframes fade-out {
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fade-in {
+        to {
+            transform-origin: center;
+            scale: 1;
+            opacity: 1;
+        }
+    }
+</style>
