@@ -1,5 +1,7 @@
 ---
 const { name, key } = Astro.props;
+
+import CoachImage from "@components/CoachImage.astro";
 ---
 
 <a
@@ -8,6 +10,9 @@ const { name, key } = Astro.props;
     hover:scale-105 transition-transform duration-300 max-md:w-full
     flex flex-col items-center"
 >
-    <div class="aspect-square rounded-2xl w-64 bg-black">Imagen aqui</div>
+    <CoachImage
+        imagePath=`/src/assets/entrenadores/${key}.webp`
+        altText={name}
+    />
     <h1 class="text-3xl text-white pt-4">{name}</h1>
 </a>
