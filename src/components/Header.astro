@@ -1,3 +1,6 @@
+---
+import{sections} from "@lib/consts"
+---
 <header class="backdrop-blur-sm text-white bg-transparent w-full sticky top-0 z-30">
 	<div class="container mx-auto flex justify-between items-center py-4 px-6">
 		<a
@@ -13,9 +16,22 @@
 		</a>
 		<nav>
 			<ul class="flex space-x-4 items-center max-sm:hidden font-semibold">
+                {
+                Array.isArray(sections) && 
+                    sections.map((r) => (
+                <a href={r.route}>
+                    {r.Title}
+                </a>
+                    ))
+                }
 				<li>
 					<a href="/about" class="hover:text-gray-200"
 						>Sobre Nosotros</a
+					>
+				</li>
+				<li>
+					<a href="/equipos" class="hover:text-gray-200"
+						>Equipos</a
 					>
 				</li>
 				<li>

@@ -1,0 +1,20 @@
+---
+import { sections } from "@lib/consts";
+---
+
+<div
+    class="flex max-sm:flex-col max-sm:w-[70%] sm:flex-row justify-between gap-3 sm:w-[90%] flex-wrap"
+>
+    { Array.isArray(sections) && sections.map((s) => (
+        <a
+            href={s.route}
+            class:list={[
+                "max-sm:p-2",
+                "rounded-lg sm:p-4 sm:text-xl sm:my-4 flex-1 text-center",
+                "hover:bg-opacity-45 bg-black bg-opacity-35 flex items-center justify-center"
+            ]}
+        >
+            <h3 class="text-slate-200 text-lg">{s.title}</h3>
+        </a>
+    ))}
+</div>

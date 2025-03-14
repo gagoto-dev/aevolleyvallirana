@@ -4,25 +4,24 @@ import InstagramIcon from "@icons/Instagram.astro";
 const today = new Date();
 ---
 
-<footer class="bg-black bg-opacity-30 text-white py-6 w-full">
+<footer class="text-bg-black bg-opacity-30 text-white py-6 w-full">
 	<div
-		class="container mx-auto mb-0 text-center flex flex-row justify-around items-center gap-4"
+        class="container mx-auto mb-0 text-center flex flex-row justify-around items-center gap-4"
 	>
 		<p class="text-slate-300 font-bold tracking-normal">
 			&copy; {today.getFullYear()} AE Volei Vallirana.
 		</p>
 		<a
 			href="https://www.instagram.com/ae_volei_vallirana/"
-			class="group flex justify-center items-center gap-4 hover:bg-violet-950 p-2 rounded-lg"
+			class="group flex justify-center items-center gap-4 p-2 rounded-lg"
 			target="_blank"
 		>
 			<InstagramIcon size="36" />
 			<span
-				class="text-slate-300 font-bold tracking-normal max-sm:hidden"
+				class="group-hover:text-slate-200 text-slate-300 font-bold tracking-normal max-sm:hidden"
 			>
 				@ae_volei_vallirana
 			</span>
 		</a>
 	</div>
 </footer>
-<style></style>

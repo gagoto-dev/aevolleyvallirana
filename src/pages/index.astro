@@ -1,26 +1,25 @@
 ---
-import TeamsSection from "@components/TeamsSection.astro";
+import IndexSection from "@components/IndexSection.astro";
 import Layout from "@layouts/Layout.astro";
-
 ---
 
 <Layout>
-	<div class="flex flex-row max-sm:items-center max-sm:gap-2 items-end gap-6 m-6">
+	<div class="flex flex-row max-sm:items-center max-sm:gap-2 items-end gap-6 m-6 mb-10">
 		<img
 			src="/aevoley-nobg.png"
 			alt="AE Volei Vallirana"
-			class="max-sm:w-24 max-md:w-36 md:w-48"
+			class="max-sm:w-24 max-lg:w-36 lg:w-48"
 		/>
 		<div class="flex flex-col items-start gap-1">
 			<h1
-				class="max-sm:text-xl sm:text-4xl md:text-7xl text-white font-bold tracking-wide ml-4 mr-6"
+				class="max-sm:text-lg sm:text-4xl lg:text-7xl text-white font-bold tracking-wide ml-4 mr-6"
 			>
 				Vòlei Vallirana
 			</h1>
-			<h3 class="max-sm:text-base sm:text-lg md:text-xl text-slate-200 text-left text-pretty mx-6 font-semibold">
+			<h3 class="max-sm:text-sm sm:text-lg lg:text-xl text-slate-200 text-left text-pretty mx-6 font-semibold">
 				Club de Voleibol en Vallirana 🏐
 			</h3>
 		</div>
 	</div>
-	<TeamsSection/>
+	<IndexSection/>
 </Layout>

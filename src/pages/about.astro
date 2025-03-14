@@ -3,19 +3,27 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout>
-    <div class="w-3/4 text-center">
-        <h2 class="text-3xl font-bold text-pretty">Sobre Nosotros</h2>
-        <img src="" alt="">
-        <div class="text">
-            <h3 class="text-xl">
-                Somos una asociación en busca de visibilizar el vóley en Vallirana.
+    <div class="max-w-[80%] text-center flex flex-row-reverse items-center gap-4">
+        <section class="max-w-[50%]">
+            <h3 class="text-3xl font-bold text-pretty">
+                AE Volei Vallirana
             </h3>
-            <p class="text-lg text-pretty">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste temporibus
-                laboriosam alias voluptatum? Officiis, ea autem minus totam deleniti
-                quam saepe ad. Labore fugit eius repellendus, praesentium nemo
-                exercitationem dignissimos!
+            <p class="text-xl text-pretty">
+                La asociación de voley de Vallirana es un grupo de amigos amantes del voleibol 
+                que se han propuesto promocionarlo y crear algo serio en Vallirana para este deporte.
             </p>
-        </div>
+        </section>
+        <section 
+            class:list={[
+                    `main-image relative aspect-[16/9] w-[45vw] max-w-[1200px] sm:max-h-[70vh]`,
+                    "flex mx-auto my-auto",
+                    "max-sm:w-fit",
+            ]}
+        >
+            <img
+                src={"/master-a.webp"}
+                class="rounded-lg shadow-lg object-cover"
+            />
+        </section>
     </div>
 </Layout>

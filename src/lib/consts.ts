@@ -3,6 +3,25 @@
 
 export const SITE_TITLE = 'AE Volei Vallirana';
 
+export const sections = [
+    {
+        title: "Sobre nosotros",
+        route: "/about",
+    },
+    {
+        title: "Blog",
+        route: "/blog",
+    },
+    {
+        title: "Equipos",
+        route: "/equipos",
+    },
+    {
+        title: "Entrenadores",
+        route: "/entrenadores",
+    },
+]
+
 export const coaches = [
     {
         name: "Mel",
@@ -22,14 +41,13 @@ export const findTeam = (key: string) => {
     return teams.find(team => team.key === key);
 }
 
-
 export const teams = [
     {
         name: "Máster mixto",
         key: "master-a",
-        image: "/master-a.png",
+        image: "/master-a.webp",
         description: "Equipo mixto de Vallirana",
-        extendedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        extendedDescription: "Equipo sénior mixto de Vallirana, actualmente no está federado, pero participa en torneos y entrena duro!",
         coaches: [findCoach("mel"), findCoach("oscar")],
         players: [
             {
@@ -122,14 +140,12 @@ export const teams = [
     {
         name: "Vall d'Arús",
         key: "vall-darus",
-        image: "/master-a.png",
         description: "Equipo del instituto Vall d'Arús Vallirana",
         coaches: [findCoach("mel")],
     },
     {
         name: "Dominiques Vallirana",
         key: "dominiques",
-        image: "/master-a.png",
         description: "Equipo de la escuela Dominiques Vallirana",
         coaches: [findCoach("oscar")],
     }
