@@ -27,9 +27,9 @@ const team = findTeam(key);
         >
             <div
                 class:list={[
-                    `main-image relative aspect-[16/9] w-[45vw] max-w-[1200px] sm:max-h-[70vh]`,
+                    `main-image relative aspect-[16/9] w-[45vw] sm:max-w-[1200px] sm:max-h-[70vh]`,
                     "flex mx-auto my-auto",
-                    "max-sm:w-fit",
+                    "max-sm:w-[90%]",
                 ]}
             >
                 <img
@@ -82,7 +82,7 @@ const team = findTeam(key);
     .main-image {
         animation: header-animation linear forwards;
         animation-timeline: view();
-        animation-range: exit;
+        animation-range: 100px exit;
         scale: 1;
         background-size: 100%;
     }
@@ -103,7 +103,7 @@ const team = findTeam(key);
     }
 
     @keyframes header-animation {
-        40% {
+        0%, 60% {
             /* scale: 100%; */
             opacity: 1;
         }
