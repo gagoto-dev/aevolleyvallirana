@@ -45,7 +45,7 @@ export const teams = [
     {
         name: "Máster mixto",
         key: "master-a",
-        image: "/master-a.webp",
+        image: "/master-a.png",
         description: "Equipo mixto de Vallirana",
         extendedDescription: "Equipo sénior mixto de Vallirana, actualmente no está federado, pero participa en torneos y entrena duro!",
         coaches: [findCoach("mel"), findCoach("oscar")],
