@@ -8,10 +8,10 @@ export const sections = [
         title: "Sobre nosotros",
         route: "/about",
     },
-    {
-        title: "Blog",
-        route: "/blog",
-    },
+    //{
+    //    title: "Blog",
+    //    route: "/blog",
+    //},
     {
         title: "Equipos",
         route: "/equipos",
