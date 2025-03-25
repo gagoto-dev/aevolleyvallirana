@@ -10,16 +10,22 @@ importers:
     dependencies:
       '@tailwindcss/vite':
         specifier: ^4.0.16
-        version: 4.0.16(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
+        version: 4.0.16(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
       astro:
         specifier: 5.5.2
         version: 5.5.2(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.34.9)(typescript@5.7.2)(yaml@2.7.0)
+      prismjs:
+        specifier: 1.30.0
+        version: 1.30.0
       sharp:
         specifier: 0.33.5
         version: 0.33.5
       tailwindcss:
         specifier: ^4.0.16
         version: 4.0.16
+      vite:
+        specifier: 6.2.3
+        version: 6.2.3(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
     devDependencies:
       prettier:
         specifier: ^3.5.3
@@ -1161,8 +1167,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  prismjs@1.29.0:
-    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
+  prismjs@1.30.0:
+    resolution: {integrity: sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw==}
     engines: {node: '>=6'}
 
   prompts@2.4.2:
@@ -1438,8 +1444,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite@6.2.2:
-    resolution: {integrity: sha512-yW7PeMM+LkDzc7CgJuRLMW2Jz0FxMOsVJ8Lv3gpgW9WLcb9cTW+121UEr1hvmfR7w3SegR5ItvYyzVz1vxNJgQ==}
+  vite@6.2.3:
+    resolution: {integrity: sha512-IzwM54g4y9JA/xAeBPNaDXiBF8Jsgl3VBQ2YQ/wOY6fyW3xMdSoltIV3Bo59DErdqdE6RxUfv8W69DvUorE4Eg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -1576,7 +1582,7 @@ snapshots:
 
   '@astrojs/prism@3.2.0':
     dependencies:
-      prismjs: 1.29.0
+      prismjs: 1.30.0
 
   '@astrojs/telemetry@3.2.0':
     dependencies:
@@ -1915,13 +1921,13 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.0.16
       '@tailwindcss/oxide-win32-x64-msvc': 4.0.16
 
-  '@tailwindcss/vite@4.0.16(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))':
+  '@tailwindcss/vite@4.0.16(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))':
     dependencies:
       '@tailwindcss/node': 4.0.16
       '@tailwindcss/oxide': 4.0.16
       lightningcss: 1.29.2
       tailwindcss: 4.0.16
-      vite: 6.2.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
+      vite: 6.2.3(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
 
   '@types/cookie@0.6.0': {}
 
@@ -2024,8 +2030,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.15.0
       vfile: 6.0.3
-      vite: 6.2.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
-      vitefu: 1.0.6(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
+      vite: 6.2.3(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
+      vitefu: 1.0.6(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
@@ -2816,7 +2822,7 @@ snapshots:
 
   prettier@3.5.3: {}
 
-  prismjs@1.29.0: {}
+  prismjs@1.30.0: {}
 
   prompts@2.4.2:
     dependencies:
@@ -3146,7 +3152,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0):
+  vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0):
     dependencies:
       esbuild: 0.25.0
       postcss: 8.5.3
@@ -3157,9 +3163,9 @@ snapshots:
       lightningcss: 1.29.2
       yaml: 2.7.0
 
-  vitefu@1.0.6(vite@6.2.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)):
+  vitefu@1.0.6(vite@6.2.3(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)):
     optionalDependencies:
-      vite: 6.2.2(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
+      vite: 6.2.3(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0)
 
   web-namespaces@2.0.1: {}
 
