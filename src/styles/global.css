@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+    --txt: "#0C0F14";
+    --txt_read: "#0C0F14dd";
+    --background: "#dfffe3";
+    --background_selected: "#C4DDCA";
+    --alice: "#EBF2FA";
+    --white: "#fff";
+    --yellow: "#ffb100";
+}
+
+@layer main {
+    .bg-black-opaque {
+        @apply bg-black/50;
+    }
+
+    .bg-main {
+        @apply bg-fixed bg-gradient-to-t from-blue-950 to-blue-400;
+    }
+
+    .bg-main-reverse {
+        @apply bg-fixed bg-gradient-to-b from-blue-950 to-blue-400;
+    }
+
+    .bg-main-left {
+        @apply bg-fixed bg-gradient-to-l from-blue-950 to-blue-400;
+    }
+
+    .bg-main-right {
+        @apply bg-fixed bg-gradient-to-r from-blue-950 to-blue-400;
+    }
+}
