@@ -8,10 +8,6 @@ export const sections = [
         title: "Sobre nosotros",
         route: "/about",
     },
-    //{
-    //    title: "Blog",
-    //    route: "/blog",
-    //},
     {
         title: "Equipos",
         route: "/equipos",
@@ -19,6 +15,10 @@ export const sections = [
     {
         title: "Entrenadores",
         route: "/entrenadores",
+    },
+    {
+        title: "Contacto",
+        route: "/contact",
     },
 ]
 
@@ -150,3 +150,8 @@ export const teams = [
         coaches: [findCoach("oscar")],
     }
 ];
+
+export const contact = {
+    email: "aevolei.vallirana@gmail.com",
+    ig: "ae_volei_vallirana",
+}
