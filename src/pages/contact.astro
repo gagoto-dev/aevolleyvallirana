@@ -1,0 +1,49 @@
+---
+import Layout from "@layouts/Layout.astro"
+
+import InstagramIcon from "@icons/Instagram.astro"
+import { contact } from "@lib/consts"
+---
+
+<Layout>
+    <section 
+        class="flex flex-col gap-2 w-full"
+    >
+        <div class="flex flex-col justify-center">
+            <h2 class="text-3xl font-bold">Contacta con nosotros</h2>
+            <h4 class="text-lg text-inherit/70">Puedes encontrarnos a través de los siguientes medios.</h4>
+        </div>
+        <div class="flex flex-row gap-6 col-span-2 p-6 w-full justify-between">
+            <a 
+                href={`mailto:${contact.email}`}
+                class="flex flex-col flex-1 justify-center bg-black/30 hover:bg-black/50 p-8 rounded-lg"
+            >
+                <h3 class="max-sm:text-sm sm:text-lg lg:text-xl font-bold">
+                    Escríbenos!
+                </h3>
+                <h5 class="group-hover:text-slate-200 text-slate-300 font-semibold">
+                    {contact.email}
+                </h5>
+            </a>
+            <a
+                class="group flex flex-col flex-1 justify-center bg-black/30 hover:bg-black/50 p-8 rounded-lg"
+                href="https://www.instagram.com/ae_volei_vallirana/"
+                target="_blank"
+            >
+                <div class="flex flex-row gap-2 items-center">
+                    <InstagramIcon size="36" />
+                    <div>
+                        <h3 class="max-sm:text-sm sm:text-lg lg:text-xl font-bold">
+                            Instagram
+                        </h3>
+                        <h5
+                            class="group-hover:text-slate-200 text-slate-300 font-semibold tracking-normal max-sm:hidden"
+                        >
+                            @{contact.ig}
+                        </h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+</Layout>
