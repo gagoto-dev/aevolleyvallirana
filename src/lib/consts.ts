@@ -56,16 +56,6 @@ export const teams = [
                 position: "Central"
             },
             {
-                name: "Alex",
-                dorsal: 2,
-                position: "Punta"
-            },
-            {
-                name: "Joel",
-                dorsal: 3,
-                position: "Central"
-            },
-            {
                 name: "Miguel",
                 dorsal: 4,
                 position: "Central"
